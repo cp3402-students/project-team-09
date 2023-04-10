@@ -1,0 +1,23 @@
+## Wordpress 
+
+/index.php
+/languages
+/plugins/index.php
+/themes/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Uploads
+# /uploads/
+
+# Log files
+*.log
+
+# plugins
+/plugins
+
+# themes
+# /themes/*
+
