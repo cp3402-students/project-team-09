@@ -1,23 +1,6 @@
-## Wordpress 
-
-/index.php
-/languages
-/plugins/index.php
-/themes/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
-
-# Uploads
-# /uploads/
-
-# Log files
-*.log
-
-# plugins
-/plugins
-
-# themes
-# /themes/*
-
+/node_modules
+/vendor
+package-lock.json
+composer.lock
+style.css.map
+.DS_Store
