@@ -16,7 +16,7 @@ get_header();
 			$magazine_posts = new WP_Query( array(
 				'post_type'      => 'post',
 				'post_status'    => 'publish',
-				'category'       => 'magazine',
+				'category_name'  => 'magazine',
 				'posts_per_page' => - 1
 			) );
 			while ( $magazine_posts->have_posts() ) :
