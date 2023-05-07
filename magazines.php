@@ -27,7 +27,7 @@ get_header();
 					<!-- title -->
 					<div class="magazine-post-list-title">
 						<h1>
-							<a href='<?php echo get_permalink() ?>'>
+							<a href="<?php echo get_permalink() ?>">
 								<?php echo get_the_title( get_the_ID() ) ?>
 							</a>
 						</h1>
