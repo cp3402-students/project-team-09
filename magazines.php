@@ -41,7 +41,7 @@ get_header();
 					<?php if ( has_excerpt() ) : ?>
 						<!-- excerpt -->
 						<div class="magazine-post-list-excerpt">
-							<?php the_excerpt() ?>
+							<p><?php the_excerpt() ?></p>
 						</div>
 					<?php endif; ?>
 
