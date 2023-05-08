@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @packageTsvCountryMusic
+ * @package TsvCountryMusic
  */
 
 if ( ! defined( 'TSVCOUNTRYMUSIC_VERSION' ) ) {
@@ -100,6 +100,7 @@ function tsvcountrymusic_setup() {
 		)
 	);
 }
+
 add_action( 'after_setup_theme', 'tsvcountrymusic_setup' );
 
 /**
@@ -112,6 +113,7 @@ add_action( 'after_setup_theme', 'tsvcountrymusic_setup' );
 function tsvcountrymusic_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'tsvcountrymusic_content_width', 640 );
 }
+
 add_action( 'after_setup_theme', 'tsvcountrymusic_content_width', 0 );
 
 /**
@@ -132,6 +134,7 @@ function tsvcountrymusic_widgets_init() {
 		)
 	);
 }
+
 add_action( 'widgets_init', 'tsvcountrymusic_widgets_init' );
 
 /**
@@ -147,6 +150,7 @@ function tsvcountrymusic_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'tsvcountrymusic_scripts' );
 
 /**

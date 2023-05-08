@@ -2,13 +2,14 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @packageTsvCountryMusic
+ * @package TsvCountryMusic
  */
 
 /**
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
+ *
  * @return array
  */
 function tsvcountrymusic_body_classes( $classes ) {
@@ -24,6 +25,7 @@ function tsvcountrymusic_body_classes( $classes ) {
 
 	return $classes;
 }
+
 add_filter( 'body_class', 'tsvcountrymusic_body_classes' );
 
 /**
@@ -34,4 +36,5 @@ function tsvcountrymusic_pingback_header() {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
+
 add_action( 'wp_head', 'tsvcountrymusic_pingback_header' );

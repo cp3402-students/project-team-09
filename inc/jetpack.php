@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @packageTsvCountryMusic
+ * @package TsvCountryMusic
  */
 
 /**
@@ -32,7 +32,7 @@ function tsvcountrymusic_jetpack_setup() {
 	add_theme_support(
 		'jetpack-content-options',
 		array(
-			'post-details' => array(
+			'post-details'    => array(
 				'stylesheet' => 'tsvcountrymusic-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
@@ -48,6 +48,7 @@ function tsvcountrymusic_jetpack_setup() {
 		)
 	);
 }
+
 add_action( 'after_setup_theme', 'tsvcountrymusic_jetpack_setup' );
 
 if ( ! function_exists( 'tsvcountrymusic_infinite_scroll_render' ) ) :

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @packageTsvCountryMusic
+ * @package TsvCountryMusic
  */
 
 get_header();
