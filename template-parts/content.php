@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @packageTsvCountryMusic
+ * @package TsvCountryMusic
  */
 
 ?>
@@ -36,7 +36,7 @@
 		the_content(
 			sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
+				/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'tsvcountrymusic' ),
 					array(
 						'span' => array(

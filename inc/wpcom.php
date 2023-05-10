@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @packageTsvCountryMusic
+ * @package TsvCountryMusic
  */
 
 /**
@@ -28,4 +28,5 @@ function tsvcountrymusic_wpcom_setup() {
 		);
 	}
 }
+
 add_action( 'after_setup_theme', 'tsvcountrymusic_wpcom_setup' );

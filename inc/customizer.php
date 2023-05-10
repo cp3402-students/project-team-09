@@ -2,7 +2,7 @@
 /**
  *TsvCountryMusic Theme Customizer
  *
- * @packageTsvCountryMusic
+ * @package TsvCountryMusic
  */
 
 /**
@@ -32,6 +32,7 @@ function tsvcountrymusic_customize_register( $wp_customize ) {
 		);
 	}
 }
+
 add_action( 'customize_register', 'tsvcountrymusic_customize_register' );
 
 /**
@@ -58,4 +59,5 @@ function tsvcountrymusic_customize_partial_blogdescription() {
 function tsvcountrymusic_customize_preview_js() {
 	wp_enqueue_script( 'tsvcountrymusic-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), TSVCOUNTRYMUSIC_VERSION, true );
 }
+
 add_action( 'customize_preview_init', 'tsvcountrymusic_customize_preview_js' );
