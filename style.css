@@ -669,6 +669,7 @@ textarea {
   padding-bottom: 5px;
   border-bottom: solid;
   border-width: 5px;
+  border-color: #d8d8d8;
 }
 /* Small menu. */
 .menu-toggle,

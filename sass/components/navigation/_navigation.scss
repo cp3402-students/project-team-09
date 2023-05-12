@@ -78,6 +78,7 @@ $navmenu-item-selected-barcolor: adjust-color($navmenu-backgroundcolor, $lightne
     padding-bottom: 5px;
     border-bottom: solid;
     border-width: 5px;
+    border-color: $navmenu-item-selected-barcolor;
   }
 
   .current_page_item > a,
