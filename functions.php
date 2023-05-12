@@ -186,3 +186,35 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+function add_category_chooser() {
+	global $post;
+	if ( 'magazines.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+		add_meta_box( 'category_chooser', "meta_box_title", "meta_box_callback", 'page', 'side' );
+	}
+}
+
+function meta_box_callback() {
+	?>
+	<p>
+		<select
+	</p>
+	<?php
+}
+
+function save_meta_box( $post_id ) {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
+	if ( $parent_id = wp_is_post_revision( $post_id ) ) {
+		$post_id = $parent_id;
+	}
+	$field = 'chosen_category';
+	update_post_meta( $post_id, $field, '$_POST[ $field ] ' );
+	if ( array_key_exists( $field, $_POST ) ) {
+		update_post_meta( $post_id, $field, $_POST[ $field ] );
+	}
+}
+
+add_action( 'add_meta_boxes', 'add_category_chooser' );
+add_action( 'save_post', 'save_meta_box' );
