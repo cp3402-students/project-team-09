@@ -31,7 +31,7 @@ function new_event_form_callback( $form_data ) {
 	} else if ( $descr_len < 250 ) {
 		$excerpt = $form_fields['description'];
 	} else {
-		$excerpt = mb_substr( $form_fields['description'], 0, 250 );
+		$excerpt = mb_substr( $form_fields['description'], 0, 250 ) . "... ";
 	}
 
 	$time      = event_form_build_time( $form_fields['datetime'] );
