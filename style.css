@@ -754,6 +754,10 @@ textarea {
   display: none;
 }
 
+.entry-header {
+  text-align: center;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
@@ -883,6 +887,14 @@ textarea {
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
 .infinity-end.neverending .site-footer {
   display: block;
+}
+
+/* Ninja forms
+--------------------------------------------- */
+.nf-before-form-content {
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 /*--------------------------------------------------------------
