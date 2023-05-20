@@ -179,6 +179,11 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+/**
+ * Load NF-event-form compatibility file.
+ */
+
+require get_template_directory() . '/inc/nf-event-form.php';
 
 /**
  * Load WooCommerce compatibility file.
@@ -190,13 +195,13 @@ if ( class_exists( 'WooCommerce' ) ) {
 function add_category_chooser() {
 	global $post;
 	if ( 'post-lister.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
-		add_meta_box( 'category_chooser', 'Post list Template Category', "meta_box_callback", 'page', 'side' );
+		add_meta_box( 'category_chooser', 'Post list Template Category', "category_chooser_callback", 'page', 'side' );
 	}
 }
 
 add_action( 'add_meta_boxes', 'add_category_chooser' );
 
-function meta_box_callback() {
+function category_chooser_callback() {
 	global $post;
 	$field = 'chosen_category';
 	?>
@@ -217,7 +222,7 @@ function meta_box_callback() {
 	<?php
 }
 
-function save_meta_box( $post_id ) {
+function save_category_meta_box( $post_id ) {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
@@ -230,4 +235,4 @@ function save_meta_box( $post_id ) {
 	}
 }
 
-add_action( 'save_post', 'save_meta_box' );
+add_action( 'save_post', 'save_category_meta_box' );
