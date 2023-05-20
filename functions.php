@@ -189,15 +189,30 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 function add_category_chooser() {
 	global $post;
-	if ( 'magazines.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
-		add_meta_box( 'category_chooser', "meta_box_title", "meta_box_callback", 'page', 'side' );
+	if ( 'post-lister.php' == get_post_meta( $post->ID, '_wp_page_template', true ) ) {
+		add_meta_box( 'category_chooser', 'Post list Template Category', "meta_box_callback", 'page', 'side' );
 	}
 }
 
+add_action( 'add_meta_boxes', 'add_category_chooser' );
+
 function meta_box_callback() {
+	global $post;
+	$field = 'chosen_category';
 	?>
 	<p>
-		<select
+		<?php $saved_chosen_category = get_post_meta( $post->ID, $field, true ) ?? null ?>
+		<select name="<?php echo $field; ?>" id="post-list-category-select">
+			<option value="" <?php echo $saved_chosen_category == null ? 'selected' : '' ?>>-- None</option>
+			<?php
+			foreach ( get_categories( '' ) as $category ) {
+				echo '<option value="' . $category->name . '" '
+					 . ( isset( $saved_chosen_category ) && $saved_chosen_category == $category->name ? 'selected>' : '>' )
+					 . $category->name
+					 . '</option>';
+			}
+			?>
+		</select>
 	</p>
 	<?php
 }
@@ -210,11 +225,9 @@ function save_meta_box( $post_id ) {
 		$post_id = $parent_id;
 	}
 	$field = 'chosen_category';
-	update_post_meta( $post_id, $field, '$_POST[ $field ] ' );
-	if ( array_key_exists( $field, $_POST ) ) {
-		update_post_meta( $post_id, $field, $_POST[ $field ] );
+	if ( isset( $_POST[ $field ] ) ) {
+		update_post_meta( $post_id, $field, sanitize_text_field( $_POST[ $field ] ) );
 	}
 }
 
-add_action( 'add_meta_boxes', 'add_category_chooser' );
 add_action( 'save_post', 'save_meta_box' );
