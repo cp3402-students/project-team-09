@@ -38,11 +38,12 @@ function new_event_form_callback( $form_data ) {
 	);
 	$post_date      = event_form_build_date( $form_fields['datetime'] );
 	$new_event_post = array(
-		'post_title'   => $form_fields['title'],
-		'post_content' => $content,
-		'post_date'    => $post_date,
-		'post_excerpt' => $excerpt,
-		'post_status'  => 'publish'
+		'post_title'    => $form_fields['title'],
+		'post_content'  => $content,
+		'post_category' => 'event',
+		'post_date'     => $post_date,
+		'post_excerpt'  => $excerpt,
+		'post_status'   => 'publish'
 	);
 	wp_insert_post( $new_event_post, true );
 }

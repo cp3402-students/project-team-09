@@ -11,6 +11,12 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		<?php
+		// Optional links to add post form
+		if ( current_user_can( 'administrator' ) ) {
+			the_content();
+		}
+		?>
 		<ul>
 			<?php
 			$category = get_post_meta( get_the_ID(), 'chosen_category', true );
@@ -23,7 +29,7 @@ get_header();
 			} else {
 				$category_posts = new WP_Query( array(
 					'post_type'      => 'post',
-					'post_status'    => 'publish',
+					'post_status'    => array( 'publish', 'future' ),
 					'category_name'  => $category,
 					'posts_per_page' => - 1
 				) );
