@@ -205,7 +205,7 @@ function meta_box_callback() {
 		<select name="<?php echo $field; ?>" id="post-list-category-select">
 			<option value="" <?php echo $saved_chosen_category == null ? 'selected' : '' ?>>-- None</option>
 			<?php
-			foreach ( get_categories( '' ) as $category ) {
+			foreach ( get_categories( array( 'hide_empty' => 0, 'type' => 'post' ) ) as $category ) {
 				echo '<option value="' . $category->name . '" '
 					 . ( isset( $saved_chosen_category ) && $saved_chosen_category == $category->name ? 'selected>' : '>' )
 					 . $category->name
