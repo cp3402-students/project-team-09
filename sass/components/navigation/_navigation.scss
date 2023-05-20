@@ -2,13 +2,16 @@ $navmenu-backgroundcolor: #0c0c0c;
 $navmenu-item-backgroundcolor: adjust-color($navmenu-backgroundcolor, $lightness: 15);
 $navmenu-item-hover-backgroundcolor: adjust-color($navmenu-backgroundcolor, $lightness: 40);
 $navmenu-item-selected-barcolor: adjust-color($navmenu-backgroundcolor, $lightness: 80);
+$navmenu-item-textcolor: white;
 
 .main-navigation {
   display: block;
+  position: relative;
   width: 100%;
   background-color: $navmenu-backgroundcolor;
 
   ul {
+    height: 100%;
     display: none;
     list-style: none;
     margin: 0;
@@ -56,10 +59,11 @@ $navmenu-item-selected-barcolor: adjust-color($navmenu-backgroundcolor, $lightne
   }
 
   li a {
+    height: 100%;
     /* Nav-bar items highlight on hover */
     padding: 10px 20px;
-    display: list-item;
-    //position: relative;
+    display: flex;
+    align-items: center;
     background-color: $navmenu-item-backgroundcolor;
 
     &:hover,
@@ -71,7 +75,7 @@ $navmenu-item-selected-barcolor: adjust-color($navmenu-backgroundcolor, $lightne
   a, a:visited {
     display: block;
     text-decoration: none;
-    color: white;
+    color: $navmenu-item-textcolor;
   }
 
   .current_page_item a {

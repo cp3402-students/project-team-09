@@ -614,14 +614,44 @@ textarea {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+/* Header
+--------------------------------------------- */
+.site-header {
+  background-color: #fae78e;
+}
+
+.site-title {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0.33em;
+  padding-bottom: 0.33em;
+  justify-content: center;
+}
+.site-title a {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  color: #6c3d00;
+  text-decoration: none;
+}
+
+.custom-logo {
+  width: auto;
+  height: 100px;
+}
+
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
   display: block;
+  position: relative;
   width: 100%;
   background-color: #0c0c0c;
 }
 .main-navigation ul {
+  height: 100%;
   display: none;
   list-style: none;
   margin: 0;
@@ -652,9 +682,11 @@ textarea {
   left: auto;
 }
 .main-navigation li a {
+  height: 100%;
   /* Nav-bar items highlight on hover */
   padding: 10px 20px;
-  display: list-item;
+  display: flex;
+  align-items: center;
   background-color: #323232;
 }
 .main-navigation li a:hover, .main-navigation li a.focus {
