@@ -773,7 +773,11 @@ textarea {
 --------------------------------------------- */
 .site-footer {
   width: 100%;
-  background-color: black;
+  background-color: #B2AC88; /* Country theme color */
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  margin: 0;
 }
 
 .site-main {
@@ -791,7 +795,7 @@ textarea {
   font-weight: bold;
   margin-bottom: 16px;
   color: #f6a62c;
-  background-color: #b9f7ff;
+  background-color: #B2AC88;
   text-align: center;
 }
 .site-main p {
