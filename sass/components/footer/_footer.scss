@@ -1,5 +1,5 @@
 .site-footer {
-    
+
     width: 100%;
     background-color: ($color__sagegreen); /* Country theme color */
     color: #333;
@@ -9,9 +9,19 @@
     text-decoration: underline;
     border-top: 1px solid #888;
     border-bottom: 1px solid #888;
-}
-.site-footer a:hover {
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
     background-color: #F0E68C; /* Sunflower Yellow */
     color: #333;
     border-radius: 5px;
+    text-decoration: underline;
+  }
 }

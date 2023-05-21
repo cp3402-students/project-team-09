@@ -1,7 +1,6 @@
 /*!
 Theme Name: TsvCountryMusic
 Description: TTCMA website theme
-Author: Team-09: James McNeill, Tristan Bowen, Sadman Shakib, Luke Maclean
 Version: 1.0.1
 Tested up to: 5.4
 Requires PHP: 5.6
@@ -518,19 +517,15 @@ table {
 a {
   color: #4169e1;
 }
-
 a:visited {
   color: #800080;
 }
-
 a:hover, a:focus, a:active {
   color: #191970;
 }
-
 a:focus {
   outline: thin dotted;
 }
-
 a:hover, a:active {
   outline: 0;
 }
@@ -549,14 +544,12 @@ input[type=submit] {
   line-height: 1;
   padding: 0.6em 1em 0.4em;
 }
-
 button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
 input[type=submit]:hover {
   border-color: #ccc #bbb #aaa;
 }
-
 button:active, button:focus,
 input[type=button]:active,
 input[type=button]:focus,
@@ -588,7 +581,6 @@ textarea {
   border-radius: 3px;
   padding: 3px;
 }
-
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=url]:focus,
@@ -636,7 +628,6 @@ textarea {
   padding-bottom: 0.33em;
   justify-content: center;
 }
-
 .site-title a {
   margin-left: 20px;
   margin-right: 20px;
@@ -659,7 +650,6 @@ textarea {
   width: 100%;
   background-color: #f7b045;
 }
-
 .main-navigation ul {
   height: 100%;
   display: none;
@@ -668,7 +658,6 @@ textarea {
   padding-left: 0;
   justify-content: center;
 }
-
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -677,26 +666,21 @@ textarea {
   left: -999em;
   z-index: 99999;
 }
-
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
-
 .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
   display: block;
   left: auto;
 }
-
 .main-navigation ul ul a {
   width: 200px;
 }
-
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
-
 .main-navigation li a {
   height: 100%;
   /* Nav-bar items highlight on hover */
@@ -705,24 +689,20 @@ textarea {
   align-items: center;
   background-color: #f7b045;
 }
-
 .main-navigation li a:hover, .main-navigation li a.focus {
   background-color: #f9c576;
 }
-
 .main-navigation a, .main-navigation a:visited {
   display: block;
   text-decoration: none;
   color: black;
 }
-
 .main-navigation .current_page_item a {
   padding-bottom: 5px;
   border-bottom: solid;
   border-width: 5px;
   border-color: #fbd9a6;
 }
-
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -733,30 +713,25 @@ textarea {
   .menu-toggle {
     display: none;
   }
-
   .main-navigation ul {
     display: flex;
   }
 }
-
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
   margin: 0 0 1.5em;
 }
-
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
   display: flex;
 }
-
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   flex: 1 0 50%;
 }
-
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -799,13 +774,11 @@ textarea {
   margin-left: auto;
   margin-right: auto;
 }
-
 .site-main ul {
   list-style-type: none;
   margin-right: 3em;
   margin-left: 3em;
 }
-
 .site-main h2 {
   font-size: 36px;
   font-weight: bold;
@@ -814,7 +787,6 @@ textarea {
   background-color: #B2AC88;
   text-align: center;
 }
-
 .site-main p {
   font-size: 24px;
   line-height: 1.5;
@@ -822,11 +794,9 @@ textarea {
   width: 60%;
   text-align: center;
 }
-
 .site-main h2 + p {
   margin-top: 8px;
 }
-
 .site-main * {
   text-align: center;
 }
@@ -879,11 +849,18 @@ textarea {
   border-top: 1px solid #888;
   border-bottom: 1px solid #888;
 }
-
+.site-footer ul {
+  list-style-type: none;
+}
+.site-footer a {
+  color: black;
+  text-decoration: none;
+}
 .site-footer a:hover {
   background-color: #F0E68C; /* Sunflower Yellow */
   color: #333;
   border-radius: 5px;
+  text-decoration: underline;
 }
 
 /* Comments
@@ -901,7 +878,6 @@ textarea {
 .widget {
   margin: 0 0 1.5em;
 }
-
 .widget select {
   max-width: 100%;
 }
@@ -928,13 +904,11 @@ textarea {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
-
 .wp-caption img[class*=wp-image-] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
 }
@@ -1035,7 +1009,6 @@ textarea {
   width: 1px;
   word-wrap: normal !important;
 }
-
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   border-radius: 3px;
