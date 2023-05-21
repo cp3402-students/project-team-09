@@ -454,7 +454,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-  background: #fff;
+  background: #facf8e;
 }
 
 hr {
@@ -617,7 +617,7 @@ textarea {
 /* Header
 --------------------------------------------- */
 .site-header {
-  background-color: #fae78e;
+  background-color: #facf8e;
 }
 
 .site-title {
@@ -648,7 +648,7 @@ textarea {
   display: block;
   position: relative;
   width: 100%;
-  background-color: #0c0c0c;
+  background-color: #f7b045;
 }
 .main-navigation ul {
   height: 100%;
@@ -687,21 +687,21 @@ textarea {
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  background-color: #323232;
+  background-color: #f7b045;
 }
 .main-navigation li a:hover, .main-navigation li a.focus {
-  background-color: #727272;
+  background-color: #f9c576;
 }
 .main-navigation a, .main-navigation a:visited {
   display: block;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .main-navigation .current_page_item a {
   padding-bottom: 5px;
   border-bottom: solid;
   border-width: 5px;
-  border-color: #d8d8d8;
+  border-color: #fbd9a6;
 }
 /* Small menu. */
 .menu-toggle,
@@ -774,6 +774,38 @@ textarea {
 .site-footer {
   width: 100%;
   background-color: black;
+}
+
+.site-main {
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-main ul {
+  list-style-type: none;
+  margin-right: 3em;
+  margin-left: 3em;
+}
+.site-main h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #f6a62c;
+  background-color: #b9f7ff;
+  text-align: center;
+}
+.site-main p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+.site-main h2 + p {
+  margin-top: 8px;
+}
+.site-main * {
+  text-align: center;
 }
 
 /* Comments

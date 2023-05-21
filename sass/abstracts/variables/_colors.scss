@@ -1,4 +1,4 @@
-$color__background-body: #fff;
+$color__background-body: #facf8e;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
@@ -19,5 +19,11 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
-$color__header-background: #fae78e;
+$color__header-background: $color__background-body;
 $color__header-text: #6c3d00;
+
+$color__navmenu-background: adjust-color($color__background-body, $lightness: -15);
+$color__navmenu-item-background: adjust-color($color__navmenu-background, $lightness: 0);
+$color__navmenu-item-hover-background: adjust-color($color__navmenu-background, $lightness: 10);
+$color__navmenu-item-selected-bar: adjust-color($color__navmenu-background, $lightness: 20);
+$color__navmenu-item-text: black;
