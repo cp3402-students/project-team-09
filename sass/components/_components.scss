@@ -6,15 +6,17 @@
 --------------------------------------------- */
 @import "navigation/navigation";
 
-/* Posts and pages
+/* Content
 --------------------------------------------- */
 @import "content/posts-and-pages";
+
+@import "content/main-body";
+
+@import "content/post-list";
 
 /* Footer
 --------------------------------------------- */
 @import "footer/footer";
-
-@import "content/main-body";
 
 /* Comments
 --------------------------------------------- */
