@@ -28,19 +28,29 @@ function new_event_form_callback( $form_data ) {
 		$excerpt = mb_substr( $form_fields['description'], 0, 250 ) . "... ";
 	}
 
-	$time           = event_form_build_time( $form_fields['datetime'] );
-	$content        = event_form_build_content(
+	$time          = event_form_build_time( $form_fields['datetime'] );
+	$content       = event_form_build_content(
 		$form_fields['description'],
 		$form_fields['datetime']['date'],
 		$time,
 		$form_fields['location'],
 		$form_fields['cost']
 	);
-	$post_date      = event_form_build_date( $form_fields['datetime'] );
+	$post_date     = event_form_build_date( $form_fields['datetime'] );
+	$category_name = 'event';
+	if ( ! get_term_by( 'name', $category_name, 'category' ) ) {
+		$category_args = array(
+			'cat_name'             => $category_name,
+			'category_description' => '',
+			'category_parent'      => 0,
+			'taxonomy'             => 'category'
+		);
+		wp_insert_category( $category_args );
+	}
 	$new_event_post = array(
 		'post_title'    => $form_fields['title'],
 		'post_content'  => $content,
-		'post_category' => array( get_cat_ID( 'event' ) ),
+		'post_category' => array( $cat_ID ),
 		'post_date'     => $post_date,
 		'post_excerpt'  => $excerpt,
 		'post_status'   => 'publish'
