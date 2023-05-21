@@ -50,7 +50,7 @@ function new_event_form_callback( $form_data ) {
 	$new_event_post = array(
 		'post_title'    => $form_fields['title'],
 		'post_content'  => $content,
-		'post_category' => array( $cat_ID ),
+		'post_category' => array( get_cat_ID( 'event' ) ),
 		'post_date'     => $post_date,
 		'post_excerpt'  => $excerpt,
 		'post_status'   => 'publish'
