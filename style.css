@@ -832,6 +832,10 @@ textarea {
   margin-bottom: 2em;
 }
 
+.cat-links {
+  display: none;
+}
+
 /* Footer
 --------------------------------------------- */
 .site-footer {
@@ -841,6 +845,15 @@ textarea {
   padding: 20px;
   text-align: center;
   margin: 0;
+  text-decoration: underline;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+.site-footer a:hover {
+  background-color: #F0E68C; /* Sunflower Yellow */
+  color: #333;
+  border-radius: 5px;
 }
 
 /* Comments
