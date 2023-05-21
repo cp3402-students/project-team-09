@@ -1,14 +1,8 @@
-$navmenu-backgroundcolor: #0c0c0c;
-$navmenu-item-backgroundcolor: adjust-color($navmenu-backgroundcolor, $lightness: 15);
-$navmenu-item-hover-backgroundcolor: adjust-color($navmenu-backgroundcolor, $lightness: 40);
-$navmenu-item-selected-barcolor: adjust-color($navmenu-backgroundcolor, $lightness: 80);
-$navmenu-item-textcolor: white;
-
 .main-navigation {
   display: block;
   position: relative;
   width: 100%;
-  background-color: $navmenu-backgroundcolor;
+  background-color: $color__navmenu-background;
 
   ul {
     height: 100%;
@@ -64,25 +58,25 @@ $navmenu-item-textcolor: white;
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    background-color: $navmenu-item-backgroundcolor;
+    background-color: $color__navmenu-item-background;
 
     &:hover,
     &.focus {
-      background-color: $navmenu-item-hover-backgroundcolor;
+      background-color: $color__navmenu-item-hover-background;
     }
   }
 
   a, a:visited {
     display: block;
     text-decoration: none;
-    color: $navmenu-item-textcolor;
+    color: $color__navmenu-item-text;
   }
 
   .current_page_item a {
     padding-bottom: 5px;
     border-bottom: solid;
     border-width: 5px;
-    border-color: $navmenu-item-selected-barcolor;
+    border-color: $color__navmenu-item-selected-bar;
   }
 
   .current_page_item > a,
