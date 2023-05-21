@@ -739,7 +739,7 @@ textarea {
   flex: 1 0 50%;
 }
 
-/* Posts and pages
+/* Content
 --------------------------------------------- */
 .sticky {
   display: block;
@@ -767,17 +767,6 @@ textarea {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
-}
-
-/* Footer
---------------------------------------------- */
-.site-footer {
-  width: 100%;
-  background-color: #B2AC88; /* Country theme color */
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  margin: 0;
 }
 
 .site-main {
@@ -810,6 +799,48 @@ textarea {
 }
 .site-main * {
   text-align: center;
+}
+
+.post-list-add-container a {
+  display: inline-block;
+  font-size: 36px;
+  color: black;
+  text-decoration: none;
+  background-color: #f6a62c;
+  border-radius: 10px;
+  border-color: black;
+  margin-top: 30px;
+  padding: 5px;
+}
+
+.post-list-container ul {
+  padding-inline-start: 0;
+}
+
+.post-lister-list h1 a {
+  font-size: 24px;
+  color: black;
+}
+
+.poster-list-read-more a {
+  color: black;
+  font-size: 20px;
+}
+
+.event-description {
+  font-size: 24px;
+  margin-bottom: 2em;
+}
+
+/* Footer
+--------------------------------------------- */
+.site-footer {
+  width: 100%;
+  background-color: #B2AC88; /* Country theme color */
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  margin: 0;
 }
 
 /* Comments
