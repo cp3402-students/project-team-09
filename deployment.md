@@ -1,8 +1,16 @@
 # Deployment to Microsoft Azure Web app
 
+## Section 0: Our project management structure
+
+We used Trello to manage and distribute tasks between developers that use a mix of MAMP stacks, VVV virtual machines and
+other solutions to develop websites locally.
+
+We used Github to collaborate and share our code. Github is also used as
+part of our deployment workflow, as follows...
+
 ## Section 1: Staging deployment
 
-Theme code contained in wp-content/themes/tsvcountrymusic is verioned in git, and shared
+Theme code contained in wp-content/themes/tsvcountrymusic is versioned in git, and shared
 via https://github.com/cp3402-students/project-team-09
 
 Theme code can be deployed to the webapp via a github action that prepares the theme code and transports it to the MS
@@ -104,4 +112,13 @@ Install mysql
 # apk add mysql
 # apk add mysql-client
 ```
+
+Once complete, code and assets can be pushed back and forth using some permutation of:
+
+`wordmove pull -e staging -tupd`
+`wordmove push -e prod -tupd`
+
+with whatever switches (theme, uploads, plugins, database, etc) as needed.
+
+
 
