@@ -40,7 +40,7 @@ function new_event_form_callback( $form_data ) {
 	$new_event_post = array(
 		'post_title'    => $form_fields['title'],
 		'post_content'  => $content,
-		'post_category' => 'event',
+		'post_category' => array( get_cat_ID( 'event' ) ),
 		'post_date'     => $post_date,
 		'post_excerpt'  => $excerpt,
 		'post_status'   => 'publish'
@@ -49,11 +49,15 @@ function new_event_form_callback( $form_data ) {
 }
 
 function event_form_build_content( $description, $date, $time, $location, $cost ) {
-	return "Date: " . $date
-	       . "Time: " . $time
-	       . "Location: " . $location
-	       . "Cost: " . $cost
-	       . $description;
+	$desc = '<div class="event-description">' . $description . '</div>';
+	$info = '<div class="event-info">'
+	        . '<p>' . 'Date: ' . $date . '</p>'
+	        . '<p>' . 'Time: ' . $time . '</p>'
+	        . '<p>' . 'Location: ' . $location . '</p>'
+	        . '<p>' . 'Cost: ' . $cost . '</p>'
+	        . '</div>';
+
+	return $desc . $info;
 }
 
 function event_form_build_date( $datetime ) {
