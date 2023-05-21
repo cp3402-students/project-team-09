@@ -47,6 +47,10 @@ get_header();
 								</a>
 							</h1>
 						</div>
+						<!-- date -->
+						<div class="post-date">
+							<?php the_date() ?>
+						</div>
 						<?php if ( isset( $thumbnail ) ) : ?>
 							<!-- featured image -->
 							<div class="poster-list-featured-image">
