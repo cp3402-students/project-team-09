@@ -851,6 +851,11 @@ textarea {
 }
 .site-footer ul {
   list-style-type: none;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+}
+.site-footer ul li {
+  margin: 10px 0 10px 0;
 }
 .site-footer a {
   color: black;
